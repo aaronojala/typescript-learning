@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="input" id="input"></div>
+        <div class="buttons">
+            <div class="operators">
+                <div onclick="sendNum('+')">+</div>
+                <div onclick="sendNum('-')">-</div>
+                <div onclick="sendNum('*')">&times;</div>
+                <div onclick="sendNum('/')">&divide;</div>
+            </div>
+            <div class="leftPanel">
+                <div class="numbers">
+                    <div onclick="sendNum('7')">7</div>
+                    <div onclick="sendNum('8')">8</div>
+                    <div onclick="sendNum('9')">9</div>
+                </div>
+                <div class="numbers">
+                    <div onclick="sendNum('4')">4</div>
+                    <div onclick="sendNum('5')">5</div>
+                    <div onclick="sendNum('6')">6</div>
+                </div>
+                <div class="numbers">
+                    <div onclick="sendNum('1')">1</div>
+                    <div onclick="sendNum('2')">2</div>
+                    <div onclick="sendNum('3')">3</div>
+                </div>
+                <div class="numbers">
+                    <div onclick="sendNum('0')">0</div>
+                    <div onclick="sendNum('.')">.</div>
+                    <div onclick="clearScr()">C</div>
+                </div>
+            </div>
+            <div class="equal" id="result" onclick="equalTo()">=</div>
+        </div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+
+</html>
