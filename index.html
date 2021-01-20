@@ -13,34 +13,34 @@
         <div class="input" id="input"></div>
         <div class="buttons">
             <div class="operators">
-                <div onclick="pushBtn(this)">+</div>
-                <div onclick="pushBtn(this)">-</div>
-                <div id="multiply" onclick="pushBtn(this)">&times;</div>
-                <div id="divide" onclick="pushBtn(this)">&divide;</div>
+                <div onclick="sendNum('+')">+</div>
+                <div onclick="sendNum('-')">-</div>
+                <div onclick="sendNum('*')">&times;</div>
+                <div onclick="sendNum('/')">&divide;</div>
             </div>
             <div class="leftPanel">
                 <div class="numbers">
-                    <div onclick="pushBtn(this)">7</div>
-                    <div onclick="pushBtn(this)">8</div>
-                    <div onclick="pushBtn(this)">9</div>
+                    <div onclick="sendNum('7')">7</div>
+                    <div onclick="sendNum('8')">8</div>
+                    <div onclick="sendNum('9')">9</div>
                 </div>
                 <div class="numbers">
-                    <div onclick="pushBtn(this)">4</div>
-                    <div onclick="pushBtn(this)">5</div>
-                    <div onclick="pushBtn(this)">6</div>
+                    <div onclick="sendNum('4')">4</div>
+                    <div onclick="sendNum('5')">5</div>
+                    <div onclick="sendNum('6')">6</div>
                 </div>
                 <div class="numbers">
-                    <div onclick="pushBtn(this)">1</div>
-                    <div onclick="pushBtn(this)">2</div>
-                    <div onclick="pushBtn(this)">3</div>
+                    <div onclick="sendNum('1')">1</div>
+                    <div onclick="sendNum('2')">2</div>
+                    <div onclick="sendNum('3')">3</div>
                 </div>
                 <div class="numbers">
-                    <div onclick="pushBtn(this)">0</div>
-                    <div onclick="pushBtn(this)">.</div>
-                    <div id="clear" onclick="pushBtn(this)">C</div>
+                    <div onclick="sendNum('0')">0</div>
+                    <div onclick="sendNum('.')">.</div>
+                    <div onclick="clearScr()">C</div>
                 </div>
             </div>
-            <div class="equal" id="result" onclick="pushBtn(this)">=</div>
+            <div class="equal" id="result" onclick="equalTo()">=</div>
         </div>
     </div>
     <script src="script.js"></script>

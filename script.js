@@ -1,20 +1,39 @@
-var outcome = document.getElementById('input');
-var pushBtn = function (obj) {
-    var pushed = obj.innerHTML;
-    if (pushed == '=') {
-        // Calculate
-        outcome.innerHTML = eval(outcome.innerHTML);
+var a = '';
+var b = '';
+var num = [];
+var ans;
+var i;
+// all the numbers and operators input will be stored in an array "num" using function "sendNum()"
+function sendNum(digit) {
+    num.push(digit);
+    if (num.length != 1) {
+        a = '';
+        document.getElementById('input').innerHTML = a; // clearing the screen
     }
-    else if (pushed == 'C') {
-        // All Clear
-        outcome.innerHTML = '0';
+    for (i = 0; i < num.length; i++) {
+        a = a + num[i]; // concatenate the elements of the array "num" into a single string, which will be displayed on the screen
     }
-    else {
-        if (outcome.innerHTML == '0') {
-            outcome.innerHTML = pushed;
-        }
-        else {
-            outcome.innerHTML += pushed;
-        }
+    document.getElementById('input').innerHTML = a; // displaying the concatenated string
+}
+// when the user presses "=", function "equalTo()" is called
+function equalTo() {
+    document.getElementById('input').innerHTML = '';
+    for (i = 0; i < num.length; i++) {
+        b += num[i]; // concatenating the array "num" into a single string
     }
-};
+    ans = eval(b);
+    document.getElementById('input').innerHTML = ans; // result display
+    while (num.length > 0) {
+        num.pop(); // emptying the array "num"
+    }
+    num.push(ans.toString());
+}
+// When user presses "C", function "clearScr()" is called
+function clearScr() {
+    document.getElementById('input').innerHTML = '';
+    while (num.length > 0) {
+        num.pop(); // emptying the array "num"
+    }
+    a = '';
+    b = '';
+}
